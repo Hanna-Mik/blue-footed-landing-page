@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blue-footed booby</title>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: #2f4374;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 20px 60px 15px;
+        padding: 30px;
+        font-size: 40px;
+        color: white;
+        border: 2px solid white;
+        border-radius: 10px;
+        text-transform: uppercase;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      h2 {
+        margin: 15px 60px 10px;
+        text-align: center;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 26px;
+        text-transform: uppercase;
+        color: white;
+        padding: 20px;
+      }
+      img {
+        display: block;
+        margin: auto;
+        border-radius: 10px;
+        max-width: 60%;
+        box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
+      }
+      hr {
+        margin: 15px 80px 5px;
+      }
+
+      p {
+        font-size: 20px;
+        margin: 25px 60px;
+        line-height: 1.5;
+      }
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 100;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        transition: all 200ms ease;
+        color: #2f4374;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 50px auto;
+        font-size: 21px;
+        font-weight: 500;
+        padding: 15px;
+        border-radius: 15px;
+        transition: all 200ms ease;
+        border: 2px solid #2f4374;
+        background: #2f4374;
+        color: white;
+        box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
+      }
+      button:hover {
+        color: #2f4374;
+        background: transparent;
+        cursor: pointer;
+      }
+      .container {
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        max-width: 60%;
+        max-height: 80%;
+        background: linear-gradient(to top, #fff1eb 0%, #2f738c 100%);
+        border-radius: 10px;
+        box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
+      }
+      .developer {
+        text-align: center;
+        margin-top: 70px;
+      }
+      .emoji {
+        color: transparent;
+        text-shadow: 0 0 #00bbf0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Blue-footed booby</h1>
+      <h2>
+        Do you want to be <br />
+        in the research team?
+      </h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/042/359/original/1640310030_8-pofoto-club-p-golubonogaya-olusha-foto-16.jpg?1659349144"
+        alt="Blue-footed booby"
+        |
+      />
+      <hr />
+      <p>
+        The blue-footed booby (Sula nebouxii) is a marine bird native to
+        subtropical and tropical regions of the eastern Pacific Ocean. It is one
+        of six species of the genus Sula – known as boobies. It is easily
+        recognizable by its distinctive bright blue feet, which is a sexually
+        selected trait.
+      </p>
+      <p>
+        Concerns of a decline in the booby population of the Galápagos Islands
+        prompted a research project in its cause. The project, completed in
+        April 2014, confirmed the population decline.
+        <strong
+          >The blue-footed booby population appears to be having trouble
+          breeding, thus is slowly declining.</strong
+        >
+        The decline is feared to be long-term, but annual data collection is
+        needed for a firm conclusion that this is not a normal fluctuation.
+      </p>
+      <p>
+        So we are launching
+        <em>a research project to study a decline in the booby population.</em>
+      </p>
+      <p>
+        <a
+          href="https://en.wikipedia.org/wiki/Blue-footed_booby"
+          target="_blank"
+          ><span class="emoji">👉🏿</span> Learn more on Wikipedia
+        </a>
+      </p>
+
+      <button>Want to join?</button>
+      <p class="developer">
+        <a
+          href="https://www.facebook.com/profile.php?id=100006290868880"
+          target="_blank"
+          >This page was built by Hanna Shchepeleva
+        </a>
+      </p>
+    </div>
+    <script>
+      function wantToJoin() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        let headerGreetings = document.querySelector("h2");
+        if (age >= 18) {
+          alert(
+            "Hi, " +
+              name +
+              ", you can take part in our project. Please, contact us by email: booby_research@org.com🙂"
+          );
+          headerGreetings.innerHTML = name + ", happy to see you here!💙";
+        } else {
+          alert(
+            "Hi, " +
+              name +
+              "! Sorry, but you can not take part in our project yet. But you can help us a lot by sharing this information🤗"
+          );
+          headerGreetings.innerHTML = name + ", happy to see you here!💙";
+        }
+      }
+      let participateButton = document.querySelector("button");
+      participateButton.addEventListener("click", wantToJoin);
+    </script>
+  </body>
+</html>
